@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<title>Making your Java APIs Groovy</title>
+	
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="core/deck.core.css">
+	
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="css/extra.css">
+	<link rel="stylesheet" href="css/springone13.css">
+
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+
+    <!-- CodeMirror stylesheet -->
+    <link rel="stylesheet" href="extensions/codemirror/deck.codemirror.css">
+
+    <link rel="stylesheet" href="extensions/codemirror/themes/neat.css">
+
+	<!-- Required Modernizr file -->
+	<script src="modernizr.custom.js"></script>
+
+	<!-- TimelineJS -->
+	<script src="jquery-1.7.2.min.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide">
+        <div class="vcenter">
+        <p><img src="images/skills-matter_logo_2010_w200.gif" alt="Skills matter"></p>
+        <h2>Making your Java APIs Groovy</h2>
+        <h3>Cédric Champeau, SpringSource</h3>
+        </div>
+</section>
+
+<section class="slide">
+	<h2>About me</h2>
+    <h3>Past : Groovy contributor</h3>
+                <ul>
+                    <li>Bugfixes
+                    <li>Modules: @Bytecode AST xform, GFreeMarker</li>
+                    <li>Core: compilation customizers, @xInterrupt, ...</li>
+                    <li>Used Groovy as a DSL for natural language processing</li>
+                </ul>
+    <h3>Present: Core Groovy committer</h3>
+            <ul>
+                <li>Compilation configuration</li>
+                <li>Static type checking & Static compilation</li>
+		        <li>Bugfixing...</li>
+                <li>Groovy in Action 2 co-author</li>
+            </ul>
+    <h3>Follow me</h3>
+        <ul>
+            <li>Twitter: <a href="http://twitter.com/CedricChampeau" target="_blank">@CedricChampeau</a></li>
+            <li>Google+: <a href="http://gplus.to/cchampeau" target="_blank">http://gplus.to/cchampeau</a></li>
+            <li>Blog: <a href="http://melix.github.io/blog" target="_blank">http://melix.github.io/blog</a></li>
+        </ul>
+</section>
+
+<section class="slide">
+    <h2>Pivotal</h2>
+    <img src="images/pivotal.png">
+</section>
+
+<section class="slide">
+    <h2>Social</h2>
+    <div class="left">
+        <p>#groovy</p>
+        <blockquote class="twitter-tweet" lang="fr"><p>Happy Birthday to the LAVA LAMP! <a href="https://twitter.com/search?q=%23Groovy&amp;src=hash">#Groovy</a> | <a href="http://t.co/aIg322pHif">http://t.co/aIg322pHif</a></p>&mdash; CLEAR 4G (@CLEAR) <a href="https://twitter.com/CLEAR/statuses/375018634269437954">3 Septembre 2013</a></blockquote>
+    </div>
+    <div class="right">
+        <p>#groovylang</p>
+        <img src="images/groovy-logo-small.png">
+        <blockquote class="twitter-tweet" lang="fr"><p>Groovy 2,2 on the front page of Hacker News. Give it some love Groovsters! <a href="https://t.co/qZPIdnmnFT">https://t.co/qZPIdnmnFT</a> <a href="https://twitter.com/search?q=%23groovylang&amp;src=hash">#groovylang</a></p>&mdash; Sean Gilligan (@msgilligan) <a href="https://twitter.com/msgilligan/statuses/402544909019643904">18 Novembre 2013</a></blockquote>
+    </div>
+</section>
+
+<section class="slide">
+    <h2>Groovy is Open Source Software</h2>
+    <div class="left">
+    <a href="https://github.com/groovy/groovy-core"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <ul>
+        <li>Licensed under APL2</li>
+        <li>101 contributors</li>
+        <li>10000+ commits</li>
+        <li>1.7+ million downloads in 2013</li>
+        <li>On GitHub since summer 2011</li>
+        <li>Dependency of <a href="http://jpm4j.org/#!/p/org.codehaus.groovy/groovy-all?tab=inbound" target="_blank">25000+ OSS projects</a></li>
+    </ul>
+    <p><iframe src="http://ghbtns.com/github-btn.html?user=groovy&repo=groovy-core&type=fork&count=true&size=large" height="30" width="170" frameborder="0" scrolling="0" style="width:170px; height: 30px;" allowTransparency="true"></iframe></p>
+    </div>
+    <div class="right">
+        <img src="images/groovy-logo-medium.png">
+    </div>
+</section>
+
+<section class="slide">
+    <h2>What's the problem?</h2>
+    <ul>
+        <li>Groovy integrates smoothly with Java</li>
+        <li>No strict requirement for wrappers</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>What's the problem?</h2>
+    <ul>
+        <li>Groovy integrates smoothly with Java</li>
+        <li>No strict requirement for wrappers</li>
+        <li>But...</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>What's good with Groovy?</h2>
+    <ul>
+        <li>We have closures</li>
+        <li class="slide">SAM type coercion</li>
+        <li class="slide">Builders</li>
+        <li class="slide">DSLs</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>A few examples</h2>
+    <h3>Ant builder</h3>
+    <textarea id="antbuilder" name="antbuilder" class="code" style="display:none" mode="groovy">
+def ant = new AntBuilder()
+ant.sequential {
+    echo("inside sequential")
+    myDir = "target/AntTest/"
+    mkdir(dir:myDir)
+    copy(todir:myDir) {
+        fileset(dir:"src/test") {
+            include(name:"**/*.groovy")
+        }
+    }
+}
+</textarea>
+</section>
+
+<section class="slide">
+    <h2>A few examples</h2>
+    <h3>Grails where queries</h3>
+    <textarea id="grails_query" name="grails_query" class="code" style="display:none" mode="groovy">
+Person.where {
+    (lastName != "Simpson" && firstName != "Fred")
+        || (firstName == "Bart" && age > 9)
+}
+</textarea>
+</section>
+<section class="slide">
+    <h2>A few examples</h2>
+    <h3>Spring Integration</h3>
+    <textarea id="spring-integration" name="spring-integration" class="code" style="display:none" mode="groovy">def builder = new IntegrationBuilder()
+def ic = builder.doWithSpringIntegration {
+    messageFlow('flow') {
+      filter {it == 'World'}
+      transform(inputChannel:'transformerChannel') {'Hello ' + it}
+      handle {println "****************** $it ***************" }
+    }
+}
+
+ic.send('flow.inputChannel','World')
+ic.send('transformerChannel','Earth')
+    </textarea>
+</section>
+
+<section class="slide">
+    <h2>A few examples</h2>
+    <h3>Groovy-stream</h3>
+    <textarea id="groovy-stream" name="groovy-stream" class="code" style="display:none" mode="groovy">@Grab( 'com.bloidonia:groovy-stream:0.6.2' )
+def s = Stream.from( x:1..5, y:1..3 )
+              .filter { ( x + y ) % ( x + 2 ) == 0 }
+              .map { x + y }
+    </textarea>
+</section>
+
+<section class="slide">
+    <h2>Let's do it!</h2>
+    <h3>Making APIs Groovier</h3>
+    <ul>
+        <li>what would be a the idiomatic Groovy?</li>
+        <li class="slide">Demo!</li>
+    </ul>
+</section>
+
+<section class="slide">
+    <h2>Questions?</h2>
+    <img src="images/questions.png">
+</section>
+
+<section class="slide">
+    <h2>Thanks!</h2>
+    <p>Slides are uploaded to my <a href="https://github.com/melix/ggx2013" target="_blank">GitHub repository</a>.</p>
+    <p>Follow me on <a href="http://twitter.com/CedricChampeau">Twitter</a> for links.</p>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="jquery-1.7.2.min.js"></script>
+<script src="core/deck.core.js"></script>
+<script src="extensions/codemirror/codemirror.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="core/deck.core.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+<script src="extensions/codemirror/deck.codemirror.js"></script>
+<script src="extensions/codemirror/mode/groovy/groovy.js"></script>
+<script src="extensions/codemirror/mode/clike/clike.js"></script>
+<script src="extensions/codemirror/mode/xml/xml.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+	$(function() {
+        $.deck('.slide');
+        var opts = $.deck('getOptions');
+        opts.codemirror.theme = 'neat';
+	});
+</script>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</body>
+</html>

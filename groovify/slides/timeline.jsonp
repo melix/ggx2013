@@ -1,0 +1,225 @@
+storyjs_jsonp_data = {
+    "timeline":
+    {
+        "date": [
+        {
+            "startDate":"2003,08,29",
+            "endDate":"2003,08,29",
+            "headline":"James Strachan launches the Groovy project",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"http://radio-weblogs.com/0112098/2003/08/29.html",
+                "thumbnail":"images/timeline/james-strachan.png",
+                "credit":"James Strachan's blog",
+                "caption":"James Strachan"
+            }
+        },
+        {
+            "startDate":"2003,12,13",
+            "endDate":"2003,12,13",
+            "headline":"First beta of Groovy released",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"http://glaforge.appspot.com/",
+                "thumbnail":"images/timeline/glaforge.jpg",
+                "credit":"First beta of Groovy",
+                "caption":"Guillaume Laforge"
+            }
+        },
+        {
+            "startDate":"2003,12,20",
+            "endDate":"2003,12,20",
+            "headline":"Guillaume Laforge becomes committer",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"http://glaforge.appspot.com/",
+                "thumbnail":"images/timeline/glaforge.jpg",
+                "credit":"Guillaume Laforge becomes committer",
+                "caption":"Guillaume Laforge"
+            }
+        },  
+        {
+            "startDate":"2004,07,13",
+            "endDate":"2004,07,13",
+            "headline":"Jeremy Rayner becomes committer",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"http://javanicus.com/blog2/index.html",
+                "thumbnail":"images/timeline/jrayner.png",
+                "credit":"Jeremy Rayner becomes committer",
+                "caption":"Jeremy Rayner"
+            }
+        },   
+        {
+            "startDate":"2004,12,08",
+            "endDate":"2004,12,08",
+            "headline":"Jochen Theodorou becomes committer",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"http://blackdragsview.blogspot.fr/",
+                "thumbnail":"images/timeline/jochen.jpg",
+                "credit":"Jochen Theodorou becomes committer",
+                "caption":"Jochen Theodorou"
+            }
+        },
+        {
+            "startDate":"2005,01,12",
+            "endDate":"2005,01,12",
+            "headline":"Dierk Koenig becomes committer",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"http://www.canoo.com/",
+                "thumbnail":"images/timeline/dierk.jpg",
+                "credit":"Dierk Koenig becomes committer",
+                "caption":"Dierk Koenig"
+            }
+        },
+        {
+            "startDate":"2006,10,12",
+            "endDate":"2006,10,12",
+            "headline":"Paul King becomes committer",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "asset": {
+                "media":"http://www.asert.com.au/",
+                "thumbnail":"images/timeline/pking.jpg",
+                "credit":"Paul King becomes committer",
+                "caption":"Paul King"
+            }
+        },
+        {
+            "startDate":"2007,01,02",
+            "endDate":"2007,01,02",
+            "headline":"Groovy 1.0",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":"First dynamic language on the JVM",
+            "asset": {
+                "media":"http://glaforge.appspot.com/article/groovy-1-0-is-there",
+                "thumbnail":"images/timeline/groovy.png",
+                "caption":"Release of Groovy 1.0"
+            }
+        },
+        {
+            "startDate":"2007,04,05",
+            "endDate":"2007,04,05",
+            "headline":"Danno Ferrin becomes committer",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":"Danno Ferrin becomes committer",
+            "asset": {
+                "media":"https://twitter.com/shemnon",
+                "thumbnail":"images/timeline/dferrin.jpg",
+                "caption":"Danno Ferrin becomes committer"
+            }
+        },
+        {
+            "startDate":"2007,12,07",
+            "endDate":"2007,12,07",
+            "headline":"Groovy 1.5",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":"<ul><li>Alignment with Java 5 (annotations,...)</li><li>Joint compiler</li>",
+            "asset": {
+                "media":"http://docs.codehaus.org/display/GROOVY/2007/12/07/Groovy+1.5+released",
+                "thumbnail":"images/timeline/groovy.png",
+                "caption":"Release of Groovy 1.5"
+            }
+        },
+        {
+            "startDate":"2009,02,19",
+            "endDate":"2009,02,19",
+            "headline":"Groovy 1.6",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":'<ul>\n<li>runtime performance improvements</li><li>AST transformations</li>\n<li>Grape module and dependency system</li>\n<li>JSR-223 scripting engine built-in</li>\n<li>metaprogramming improvements, like the EMC DSL, per-instance metaclasses, runtime mixins</li>\n</ul>',
+            "asset": {
+                "media":"http://docs.codehaus.org/display/GROOVY/2009/02/18/The+final+version+of+Groovy+1.6+is+released",
+                "thumbnail":"images/timeline/groovy.png",
+                "caption":"Release of Groovy 1.6"
+            }
+        },
+        {
+            "startDate":"2009,12,22",
+            "endDate":"2009,12,22",
+            "headline":"Groovy 1.7",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":'Power asserts<p>new GroovyScriptEngine<p>SQL enhancements',
+            "asset": {
+                "media":"http://docs.codehaus.org/display/GROOVY/2009/12/22/Groovy+1.7+released",
+                "thumbnail":"images/timeline/groovy.png",
+                "caption":"Release of Groovy 1.7"
+            }
+        },
+        {
+            "startDate":"2011,04,27",
+            "endDate":"2011,04,27",
+            "headline":"Groovy 1.8",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":'Runtime performance boost<p>Enhanced DSLs (command chains)<p>JSON<p>Improved functional programming',
+            "asset": {
+                "media":"http://docs.codehaus.org/display/GROOVY/2011/04/27/Groovy+1.8.0+final+is+released",
+                "thumbnail":"images/timeline/groovy.png",
+                "caption":"Release of Groovy 1.8"
+            }
+        },
+        {
+            "startDate":"2011,04,20",
+            "endDate":"2011,04,20",
+            "headline":"Cédric Champeau becomes committer",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":'I become committer after having contributed several features for Groovy 1.8',
+            "asset": {
+                "media":"http://groovy.329449.n5.nabble.com/Cedric-as-new-committer-and-targeting-post-Easter-for-Groovy-1-8-td4315525.html",
+                "thumbnail":"images/timeline/minimoi2.jpg",
+                "caption":"Cédric Champeau becomes committer"
+            }
+        },
+        {
+            "startDate":"2012,06,28",
+            "endDate":"2012,06,28",
+            "headline":"Groovy 2.0 released",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":'Modularisation<p>Static type checking/compilation<p>Java 7 alignments<p>Semantic versioning',
+            "asset": {
+                "media":"http://glaforge.appspot.com/article/groovy-2-0-released",
+                "thumbnail":"images/timeline/groovy.png",
+                "caption":"Release of Groovy 2.0"
+            }
+        },
+        {
+            "startDate":"2013,01,25",
+            "endDate":"2013,01,25",
+            "headline":"Groovy 2.1 released",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":'Type checking extensions<p>Full invokedynamic support<p>Meta annotations',
+            "asset": {
+                "media":"http://glaforge.appspot.com/article/groovy-2-1-is-released",
+                "thumbnail":"images/timeline/groovy.png",
+                "caption":"Release of Groovy 2.1"
+            }
+        },
+        {
+            "startDate":"2013,11,18",
+            "endDate":"2013,11,18",
+            "headline":"Groovy 2.2 released",
+            "classname":"optionaluniqueclassnamecanbeaddedhere",
+            "text":'Implicit closure coercion<p>Groovysh enhancements<p>GAPI improvements',
+            "asset": {
+                "media":"http://glaforge.appspot.com/article/groovy-2-2-released",
+                "thumbnail":"images/timeline/groovy.png",
+                "caption":"Release of Groovy 2.2"
+            }
+        }
+        ],
+            "era": [
+            {
+                "startDate":"2003,08,29",
+                "endDate":"2006",
+                "headline":"James Strachan lead",
+            },
+            {
+                "startDate":"2006",
+                "endDate":"2014",
+                "headline":"Guillaume Laforge lead",
+            }
+
+        ]
+
+    }
+}
